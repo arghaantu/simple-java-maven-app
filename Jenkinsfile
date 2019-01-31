@@ -24,7 +24,12 @@ pipeline {
                 }
             }
         }
-      
+      stage ('Deploy')
+        {
+            steps{
+            sh "java -jar target/my-app-1.0-SNAPSHOT.jar"
+            }
+        }
         
     }
 }
